@@ -1,0 +1,19 @@
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+.w3-row {
+    word-wrap: break-word;
+}
+
+.red {
+    color: red;
+}
+
+.main-conatiner{
+    max-width:2000px;
+    margin-top:46px;
+}

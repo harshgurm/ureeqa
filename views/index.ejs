@@ -1,0 +1,30 @@
+<%-include('include/header') %>
+
+<!-- Page content -->
+<div class="w3-container w3-content w3-padding-64 main-container">
+
+  <form action="submit" method="post">
+    <!-- user input-->
+    <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+      <div class="w3-half">
+        Please Enter a number:<input class="w3-input w3-border" type="text" placeholder="Number" required name="number">
+      </div>
+    </div>
+    <button class="w3-button w3-cyan w3-section" type="submit">Submit</button>
+  </form>
+<!-- Display prime numbers and median -->
+  <% if (typeof data=='object' && data) { %>
+    <div class="w3-row">Prime Numbers: <%= data.prime_numbers %>
+    </div>
+    <div class="w3-row">Median: <%= data.median %>
+    </div>
+  <% } %>
+
+  <!-- Display errors -->
+  <% if (typeof errors=='object' && errors) { %>
+    <div class="w3-row red">
+      <%= errors[0].msg %>
+    </div>
+  <% } %>
+
+  <%-include('include/footer') %>
